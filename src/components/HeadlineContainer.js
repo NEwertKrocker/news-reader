@@ -1,14 +1,14 @@
 import React from 'react';
 import Headline from './Headline'
 
-const HeadlineContainer = ({articles}) => {
+const HeadlineContainer = ({ articles, selectArticle }) => {
 
   let headlines = articles.map((article) => {
-    return <Headline title={article.title} />
+    return <Headline key={article.uri} id={article.uri} title={article.title} selectArticle={selectArticle} />
   })
 
   return(
-    <div>
+    <div className='headline-container'>
       {headlines}
     </div>
   )

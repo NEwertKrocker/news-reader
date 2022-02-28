@@ -1,9 +1,10 @@
 import React from 'react';
+import '../css/Headline.css'
 
-const Headline = ({title}) => {
+const Headline = ({title, id, selectArticle}) => {
 
   return(
-    <p>{title}</p>
+    <div className='headline' id={id} onClick={(e) => {selectArticle(e)}}>{title}</div>
   )
 
 }
