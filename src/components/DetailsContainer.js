@@ -1,10 +1,11 @@
 import React from 'react';
-import Details from './Details'
+import Details from './Details';
+import '../css/DetailsContainer.css';
 
 const DetailsContainer = ({selectedArticle}) => {
 
   return(
-    <div>
+    <div className='details-container'>
       {selectedArticle && <Details selectedArticle={selectedArticle}/>}
     </div>
   )
