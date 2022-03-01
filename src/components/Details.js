@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../css/Details.css';
 
 const Details = ({selectedArticle}) => {
 
@@ -11,7 +11,7 @@ const Details = ({selectedArticle}) => {
   }
 
   return(
-    <div>
+    <div className='details'>
       <img src={photo}/>
       <h1>{selectedArticle.title}</h1>
       <p>{selectedArticle.abstract}</p>
