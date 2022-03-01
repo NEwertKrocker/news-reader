@@ -1,4 +1,4 @@
-.headline {
+.headline-card {
   display: block;
   text-align: left;
   font-size: 20px;
@@ -7,4 +7,19 @@
   background-color: white;
   padding: 20px;
   margin: 5px;
+}
+
+.headline {
+  padding: none;
+  margin-block-start: .1em;
+  margin-block-end: .2em;
+}
+
+.headline-section {
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  display: inline;
+  padding: 2px 10px;
+  border-radius: 10px;
 }
