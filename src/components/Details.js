@@ -3,8 +3,16 @@ import React from 'react';
 
 const Details = ({selectedArticle}) => {
 
+  let photo;
+  if(selectedArticle.multimedia){
+    photo = selectedArticle.multimedia[1].url
+  } else {
+    photo = ``;
+  }
+
   return(
     <div>
+      <img src={photo}/>
       <h1>{selectedArticle.title}</h1>
       <p>{selectedArticle.abstract}</p>
       <h6>{selectedArticle.byline}</h6>
