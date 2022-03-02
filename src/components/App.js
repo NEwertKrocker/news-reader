@@ -10,6 +10,7 @@ class App extends Component {
     super(props)
     this.state = {
       articles: [],
+      allArticles: [],
       sections: [],
       selectedArticle: {}
     }
@@ -21,6 +22,16 @@ class App extends Component {
     this.setState({ selectedArticle: targetArticle })
   }
 
+  filterSections = (section) => {
+    console.log(section)
+    if(section === 'all articles'){
+      this.setState({ articles: this.state.allArticles })
+    } else {
+      let filteredArticles = this.state.allArticles.filter(article => article.section === section)
+      this.setState({ articles: filteredArticles })
+    }
+  }
+
   componentDidMount(){
     fetchHeadlines()
       .then(data => {
@@ -29,8 +40,8 @@ class App extends Component {
             articleSections.push(article.section)
           }
           return articleSections
-        }, [])
-        this.setState({ articles: data.results, sections: sections, selectedArticle: data.results[0] })
+        }, ["all articles"])
+        this.setState({ articles: data.results, allArticles: data.results, sections: sections, selectedArticle: data.results[0] })
       })
   }
 
@@ -39,7 +50,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <p className='app-title'> NYT News Reader </p>
-          <NavBar sections={this.state.sections}/>
+          <NavBar sections={this.state.sections} filterSections={this.filterSections}/>
         </header>
         <main>
           <HeadlineContainer articles={this.state.articles} selectArticle={this.selectArticle} />

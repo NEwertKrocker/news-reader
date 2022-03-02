@@ -1,10 +1,10 @@
 import React from 'react';
 import '../css/NavBar.css'
 
-const NavBar = ({sections}) => {
+const NavBar = ({sections, filterSections}) => {
 
   let articleSections = sections.map((section) => {
-    return <li key={section}>{section}</li>
+    return <li key={section} onClick={() => filterSections(section)}>{section}</li>
   })
 
   return(
