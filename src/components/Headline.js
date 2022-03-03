@@ -4,7 +4,7 @@ import '../css/Headline.css'
 const Headline = ({title, id, section, selectArticle}) => {
 
   return(
-    <div className='headline-card' id={id} onClick={() => {selectArticle(id)}}>
+    <div className='headline-card' tabindex='0' id={id} onClick={() => {selectArticle(id)}}>
       <p className='headline'>{title}</p>
       <p className='headline-section'>{section}</p>
     </div>

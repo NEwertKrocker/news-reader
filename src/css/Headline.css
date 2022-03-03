@@ -9,6 +9,12 @@
   margin: 5px;
 }
 
+.headline-card:hover,
+.headline-card:focus {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
 .headline {
   padding: none;
   margin-block-start: .1em;

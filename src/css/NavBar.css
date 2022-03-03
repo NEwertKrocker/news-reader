@@ -9,10 +9,12 @@ li {
   border-radius: 20px;;
 }
 
-li:hover {
+li:hover,
+li:focus {
   cursor: pointer;
   background-color: white;
   color: black;
+  transform: scale(1.05);
 }
 
 .section-list {
