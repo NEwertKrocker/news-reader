@@ -4,7 +4,7 @@ import '../css/NavBar.css'
 const NavBar = ({sections, filterSections}) => {
 
   let articleSections = sections.map((section) => {
-    return <li key={section} onClick={() => filterSections(section)}>{section}</li>
+    return <li key={section} tabindex='0' onClick={() => filterSections(section)}>{section}</li>
   })
 
   return(
