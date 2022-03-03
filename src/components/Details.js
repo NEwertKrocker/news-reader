@@ -15,7 +15,7 @@ const Details = ({selectedArticle}) => {
 
   return(
     <div className='details'>
-      <img src={photo} alt={caption}/>
+      <img className='headline-image' src={photo} alt={caption}/>
       <h1>{selectedArticle.title}</h1>
       <p>{selectedArticle.abstract}</p>
       <p className='byline'>{selectedArticle.byline}</p>

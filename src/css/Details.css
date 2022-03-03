@@ -8,6 +8,11 @@
   width: 50%;
 }
 
+.headline-image {
+  max-width: 100%;
+  height: auto;
+}
+
 .byline {
   font-size: .8em;
   font-weight: bold;
